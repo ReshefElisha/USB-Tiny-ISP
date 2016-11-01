@@ -12,18 +12,18 @@
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
-<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="yes" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
 <layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
@@ -142,6 +142,14 @@
 <wire x1="0.508" y1="17.272" x2="23.622" y2="17.272" width="0.0254" layer="20"/>
 <wire x1="0.508" y1="5.08" x2="23.622" y2="5.08" width="0.0254" layer="20"/>
 <wire x1="23.622" y1="17.272" x2="23.622" y2="5.08" width="0.0254" layer="20" curve="-55.620831"/>
+<text x="17.018" y="11.176" size="0.6096" layer="21" font="vector" ratio="15" distance="0" rot="R270" align="top-center">VCC MOSI GND
+ .    .   .  </text>
+<text x="18.796" y="11.176" size="0.6096" layer="21" font="vector" ratio="15" distance="71" rot="R270" align="top-center"> .    .   .  
+MISO SCK RST</text>
+<text x="11.684" y="14.478" size="1.27" layer="22" font="vector" ratio="20" rot="SMR180" align="top-center">RHE</text>
+<text x="19.812" y="6.35" size="0.4064" layer="21" font="vector" ratio="15" distance="230" rot="R270" align="bottom-center">V-0-G&gt;
+
+1-2-R&gt;</text>
 </plain>
 <libraries>
 <library name="SparkFun-Capacitors">
@@ -397,7 +405,7 @@ design rules under a new name.</description>
 <param name="mlMaxStopFrame" value="4mil"/>
 <param name="mlMinCreamFrame" value="0mil"/>
 <param name="mlMaxCreamFrame" value="0mil"/>
-<param name="mlViaStopLimit" value="0mil"/>
+<param name="mlViaStopLimit" value="25mil"/>
 <param name="srRoundness" value="0"/>
 <param name="srMinRoundness" value="0mil"/>
 <param name="srMaxRoundness" value="0mil"/>
@@ -534,7 +542,7 @@ design rules under a new name.</description>
 <contactref element="U$1" pad="VCC"/>
 <contactref element="JP2" pad="2"/>
 <contactref element="R6" pad="1"/>
-<wire x1="5.388" y1="7.676" x2="9" y2="7.676" width="0.4064" layer="1"/>
+<wire x1="5.388" y1="7.676" x2="8.746" y2="7.676" width="0.4064" layer="1"/>
 <wire x1="12.7" y1="8.548" x2="12.7" y2="7.366" width="0.4064" layer="1"/>
 <wire x1="12.7" y1="7.366" x2="14.224" y2="5.842" width="0.4064" layer="1"/>
 <wire x1="14.224" y1="5.842" x2="16.764" y2="5.842" width="0.4064" layer="1"/>
@@ -542,8 +550,7 @@ design rules under a new name.</description>
 <wire x1="17.272" y1="5.842" x2="20.066" y2="8.636" width="0.4064" layer="1"/>
 <via x="16.764" y="6.858" extent="1-16" drill="0.2032" diameter="0.4572"/>
 <wire x1="16.764" y1="6.858" x2="16.764" y2="5.842" width="0.4064" layer="1"/>
-<wire x1="9" y1="7.676" x2="9" y2="7.422" width="0.4064" layer="1"/>
-<wire x1="9" y1="7.422" x2="10.326" y2="6.096" width="0.4064" layer="1"/>
+<wire x1="8.746" y1="7.676" x2="10.326" y2="6.096" width="0.4064" layer="1"/>
 <wire x1="10.326" y1="6.096" x2="10.326" y2="6.262" width="0.4064" layer="1"/>
 <wire x1="10.326" y1="6.262" x2="11.176" y2="7.112" width="0.4064" layer="1"/>
 <wire x1="11.176" y1="7.112" x2="12.446" y2="7.112" width="0.4064" layer="1"/>
@@ -556,13 +563,13 @@ design rules under a new name.</description>
 <contactref element="C1" pad="2"/>
 <contactref element="Z1" pad="2"/>
 <contactref element="Z2" pad="1"/>
-<polygon width="0.4064" layer="1">
+<polygon width="0.0254" layer="1" thermals="no">
 <vertex x="9.398" y="18.796"/>
 <vertex x="9.398" y="4.572"/>
 <vertex x="35.306" y="4.826"/>
 <vertex x="35.306" y="18.796"/>
 </polygon>
-<polygon width="0.4064" layer="16">
+<polygon width="0" layer="16" thermals="no">
 <vertex x="6.604" y="20.32"/>
 <vertex x="6.604" y="2.54"/>
 <vertex x="36.83" y="2.286"/>
@@ -669,7 +676,15 @@ design rules under a new name.</description>
 <approved hash="4,16,b795ede2c6b13944"/>
 <approved hash="4,16,de8d2d9c621245b5"/>
 <approved hash="4,16,cc368fab54f1f36a"/>
+<approved hash="3,1,1624121612121620"/>
+<approved hash="3,16,90a292a092a090a2"/>
 </errors>
 </board>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>
